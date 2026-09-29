@@ -5,17 +5,17 @@ import AngkaHoki from "@/components/AngkaHoki";
 
 export default function HeroProduct() {
   return (
-    <section className="container-main py-10 lg:py-16 anim-fade-up">
-      <nav className="text-xs tracking-wider text-fg-muted flex gap-2 items-center mb-6 anim-slide-up" aria-label="Breadcrumb">
+    <section className="container-main py-4 lg:py-6 anim-fade-up hero-cinematic relative">
+      <nav className="text-xs tracking-wider text-fg-muted flex gap-2 items-center mb-3 anim-slide-up" aria-label="Breadcrumb">
         <Link href="/" className="hover:text-gold transition-colors">athena168</Link>
         <span className="text-border-default" aria-hidden="true">›</span>
         <span className="text-gold font-medium">Platform Premium</span>
       </nav>
 
-      <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start overflow-hidden">
+      <div className="grid lg:grid-cols-2 gap-4 lg:gap-6 items-start overflow-hidden">
         {/* Product Image - Left side on desktop */}
         <div className="relative anim-fade-up lg:sticky lg:top-24">
-          <div className="absolute -inset-4 bg-gradient-to-br from-gold/10 via-emerald/5 to-royal/10 rounded-xl blur-xl opacity-30" aria-hidden="true" />
+          <div className="absolute -inset-4 bg-gradient-to-br from-gold/15 via-emerald/10 to-gold-light/5 rounded-xl blur-2xl opacity-30" aria-hidden="true" />
           <div className="aspect-[2/3] relative overflow-hidden bg-bg-deep">
             <Image
               src="/posterathena168.png"
@@ -39,7 +39,7 @@ export default function HeroProduct() {
           </div>
           
           {/* Gold accent bar */}
-          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-gold via-emerald to-cyan" aria-hidden="true" />
+          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-gold via-gold-light to-gold-dark" aria-hidden="true" />
           
           {/* Floating stats cards */}
           <div className="absolute -bottom-2 left-3 right-3 lg:left-0 lg:right-auto lg:w-1/2 flex flex-col gap-1.5 anim-slide-up anim-delay-200">
@@ -72,7 +72,7 @@ export default function HeroProduct() {
 
         {/* Product Info - Right side on desktop */}
         <div className="anim-fade-up anim-delay-100">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-gold/10 border border-gold/30 text-gold text-xs font-bold tracking-wider uppercase mb-6">
+          <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-gold/10 border border-gold/30 text-gold text-[10px] font-bold tracking-wider uppercase mb-2">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
               <circle cx="12" cy="12" r="10" />
               <path d="M12 6v6l4 2" />
@@ -80,11 +80,11 @@ export default function HeroProduct() {
             Platform Resmi 2026
           </div>
 
-          <h1 className="heading-xl gradient-brand">
+          <h1 className="heading-xl gradient-brand mt-1">
             athena168® — Platform Gaming Terpercaya 2026
           </h1>
 
-          <div className="mt-6 flex items-center gap-6">
+          <div className="mt-4 flex items-center gap-6">
             <div className="flex items-center gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-emerald animate-pulse" aria-hidden="true" />
               <span className="body-sm text-emerald-light font-medium">Server Online</span>
@@ -103,7 +103,7 @@ export default function HeroProduct() {
             <a
               href="https://tokosoon.site/auth/register?ref=zrg2e2s"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="sponsored nofollow noopener noreferrer"
               className="card card-felt p-5 hover:border-emerald/40 transition-all duration-300 group"
             >
               <div className="flex items-start gap-4">
@@ -125,7 +125,7 @@ export default function HeroProduct() {
             <a
               href="https://tokosoon.site/auth/login?ref=zrg2e2s"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="sponsored nofollow noopener noreferrer"
               className="card card-vip p-5 hover:border-royal/40 transition-all duration-300 group"
             >
               <div className="flex items-start gap-4">

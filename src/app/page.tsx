@@ -3,8 +3,32 @@ import HeroProduct from "@/components/HeroProduct";
 import Testimonials from "@/components/Testimonials_new";
 import FAQ from "@/components/FAQ_new";
 import InfoTable from "@/components/InfoTable_new";
+import { faqs } from "@/lib/faqs";
 
-const jsonLd = {
+export const metadata = {
+  metadataBase: new URL("https://athena168.web.id"),
+  title: "athena168® — Platform Gaming Terpercaya 2026",
+  description: "athena168 2026 — platform gaming terpercaya dengan akses stabil 24 jam. Daftar, login, dan jelajahi berbagai permainan dengan transaksi aman dan penawaran transparan.",
+  alternates: { canonical: "https://athena168.web.id/" },
+  openGraph: {
+    title: "athena168® — Platform Gaming Terpercaya 2026",
+    description: "Platform gaming dengan akses stabil 24 jam. Transaksi aman, penawaran harian, dan informasi RTP lengkap.",
+    url: "https://athena168.web.id/",
+    siteName: "athena168",
+    type: "website",
+    locale: "id_ID",
+    images: [{ url: "/LOGO.png", width: 1200, height: 630, alt: "athena168 - Platform Gaming" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "athena168® — Platform Gaming Terpercaya 2026",
+    description: "Akses stabil 24 jam, transaksi aman, penawaran harian. Informasi RTP dan panduan bermain lengkap.",
+    images: ["/LOGO.png"],
+  },
+  robots: { index: true, follow: true },
+};
+
+const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: "athena 168 2026: Panduan Lengkap Platform Game Online",
@@ -13,7 +37,17 @@ const jsonLd = {
   publisher: { "@type": "Organization", name: "athena168" },
   datePublished: "2026-09-15",
   dateModified: "2026-09-15",
-  mainEntityOfPage: "https://athena168.run/",
+  mainEntityOfPage: "https://athena168.web.id/",
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
 };
 
 export default function Home() {
@@ -37,7 +71,7 @@ export default function Home() {
           </header>
 
           {/* Table of Contents - Luxury Gold Style */}
-          <nav className="card card-vip mb-8 lg:mb-10 anim-slide-up anim-delay-300 p-5" aria-label="Daftar Isi">
+          <nav className="toc-premium mb-8 lg:mb-10 anim-slide-up anim-delay-300 p-5" aria-label="Daftar Isi">
             <div className="flex items-center gap-3 mb-4 border-b border-gold/20 pb-3">
               <span className="w-1.5 h-6 rounded-sm bg-gradient-to-b from-gold to-gold-dark shadow-[0_0_10px_rgba(240,185,11,0.5)]" aria-hidden="true" />
               <h3 className="heading-sm text-gold">Daftar Isi</h3>
@@ -82,7 +116,7 @@ export default function Home() {
           </nav>
 
           {/* Article Content - Luxury Prose */}
-          <div className="prose-luxury">
+          <div className="prose-premium">
             <section id="apa-itu" className="anim-slide-up">
             <p>
               <strong className="text-gold">athena 168</strong> adalah platform gaming
@@ -114,8 +148,8 @@ export default function Home() {
               </p>
               <ol className="space-y-3 list-decimal list-inside">
                 <li className="body text-fg-secondary">
-                  Buka <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2">tokosoon.site</a>
-                  atau <a href="https://tokosoon.site/auth/login?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2">tokosoon.site</a>
+                  Buka <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2">athena168.my.id</a>
+                  atau <a href="https://tokosoon.site/auth/login?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2">athena168.my.id</a>
                 </li>
                 <li className="body text-fg-secondary">Klik <strong className="text-gold">DAFTAR</strong> → isi username & password</li>
                 <li className="body text-fg-secondary">Verifikasi → <strong className="text-gold">LOGIN</strong> dan nikmati penawaran new member</li>
@@ -157,7 +191,7 @@ export default function Home() {
               <p className="body text-fg-secondary">
                 athena 168 menghadirkan ekosistem permainan lengkap dalam satu akun.
                 Semua produk dapat diakses setelah
-                <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2">daftar</a>
+                <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2">daftar</a>
                 dan login — tanpa perlu pindah platform.
               </p>
 
@@ -165,7 +199,7 @@ export default function Home() {
               <p className="body text-fg-secondary">
                 Jelajahi beragam pilihan permainan togel dengan berbagai pasaran menarik.
                 Temukan pengalaman bermain yang seru dan kesempatan memenangkan hadiah besar.
-                <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2 font-medium">Daftar sekarang</a>
+                <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2 font-medium">Daftar sekarang</a>
                 untuk mulai menikmati sensasi permainan yang mengasyikkan.
               </p>
 
@@ -173,7 +207,7 @@ export default function Home() {
               <p className="body text-fg-secondary">
                 Nikmati sensasi tak terlupakan permainan slot dengan beragam tema menarik,
                 bonus menarik, dan kesempatan memenangkan hadiah besar.
-                <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2 font-medium">Lihat detail</a>
+                <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2 font-medium">Lihat detail</a>
                 dan rasakan keseruan tanpa batas!
               </p>
 
@@ -182,7 +216,7 @@ export default function Home() {
                 Jelajahi dunia permainan casino yang mengasyikkan dan menghibur.
                 Nikmati beragam permainan menarik seperti baccarat, sweet bonanza, roulette,
                 langsung dari kenyamanan rumah Anda.
-                <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2 font-medium">Lihat detail</a>
+                <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2 font-medium">Lihat detail</a>
                 dan rasakan keseruan tanpa batas!
               </p>
               <h3 className="heading-md text-emerald-light mt-8 mb-3 flex items-center gap-2">💎 Fitur Unggulan</h3>
@@ -202,10 +236,10 @@ export default function Home() {
               <p className="body text-fg-secondary">
                 athena 168 berkomitmen pada permainan yang aman, adil, dan bertanggung jawab.
                 Mengacu pada
-                <a href="https://tokosoon.site/help-center/terms-condition" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2">Syarat & Ketentuan</a>
+<a href="https://tokosoon.site/help-center/terms-condition" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2" target="_blank" rel="sponsored nofollow noopener noreferrer">Syarat & Ketentuan</a>
                 dan
-                <a href="https://tokosoon.site/about" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2">Tentang Kami</a>
-                di tokosoon.site:
+<a href="https://tokosoon.site/about" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2" target="_blank" rel="sponsored nofollow noopener noreferrer">Tentang Kami</a>
+                di athena168.my.id:
               </p>
               <ul className="space-y-3 list-disc list-inside mt-4">
                 <li className="body text-fg-secondary"><strong className="text-gold">Usia minimal 17 tahun</strong> — Pendaftar wajib berusia 17 tahun ke atas dan lolos verifikasi KYC (Know Your Customer).</li>
@@ -217,9 +251,9 @@ export default function Home() {
               </ul>
               <p className="body-sm text-fg-muted mt-6">
                 Info lengkap:
-                <a href="https://tokosoon.site/help-center/terms-condition" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2">Syarat & Ketentuan</a> •
-                <a href="https://tokosoon.site/help-center/privacy-policy" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2">Kebijakan Privasi</a> •
-                <a href="https://tokosoon.site/help-center" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2">Pusat Bantuan</a>
+<a href="https://tokosoon.site/help-center/terms-condition" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2" target="_blank" rel="sponsored nofollow noopener noreferrer">Syarat & Ketentuan</a>
+<a href="https://tokosoon.site/help-center/privacy-policy" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2" target="_blank" rel="sponsored nofollow noopener noreferrer">Kebijakan Privasi</a>
+<a href="https://tokosoon.site/help-center" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2" target="_blank" rel="sponsored nofollow noopener noreferrer">Pusat Bantuan</a>
               </p>
             </section>
 
@@ -229,9 +263,9 @@ export default function Home() {
               <p className="body-lg text-fg-primary">
                 <strong className="text-gold">Kesimpulan:</strong>
                 Jika Anda mencari platform gaming dengan akses cepat dan fitur menarik,
-                <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2 font-medium">athena 168</a>
+                <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="text-gold hover:text-gold-light transition-colors underline underline-offset-2 font-medium">athena 168</a>
                 layak dipertimbangkan.
-                <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="btn btn-primary inline-flex items-center gap-2 ml-4">
+                <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="btn btn-primary inline-flex items-center gap-2 ml-4">
                   Mulai Sekarang
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                     <path d="M5 12h14M12 5l7 7-7 7" />
@@ -245,7 +279,8 @@ export default function Home() {
       </section>
 
       {/* JSON-LD Structured Data */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* RTP Page Link - Prominent placement */}
       <section className="container-main py-8 lg:py-12 anim-fade-up">
@@ -268,7 +303,7 @@ export default function Home() {
 
       {/* Components */}
       <Testimonials />
-      <div id="faq"><FAQ /></div>
+      <FAQ />
       <InfoTable />
 
       <div className="h-10 lg:h-12" />

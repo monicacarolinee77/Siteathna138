@@ -1,28 +1,6 @@
 "use client";
 import { useState } from "react";
-
-const faqs = [
-  {
-    q: "Apa itu athena168?",
-    a: "Platform gaming dengan akses cepat via athena168.run, stabil di HP & desktop. Platform ini menyediakan berbagai permainan menarik dengan informasi transparan.",
-    icon: "🎮",
-  },
-  {
-    q: "Cara mengakses platform?",
-    a: "Buka tokosoon.site/auth/register?ref=zrg2e2s, lalu login. Simpan di bookmark. Akses platform ini tersedia 24 jam. Alternatif akses juga tersedia melalui kanal resmi untuk kemudahan.",
-    icon: "🔗",
-  },
-  {
-    q: "Apakah aman?",
-    a: "Ya, keamanan berlapis dan enkripsi. Selalu gunakan tautan resmi untuk transaksi. Informasi platform kami terverifikasi dan adil.",
-    icon: "🔒",
-  },
-  {
-    q: "Minimal transaksi?",
-    a: "Rp 10.000 minimal funding, Rp 50.000 minimal withdrawal. Bank, E-Wallet & QRIS. Proses rata-rata kurang dari 3 menit.",
-    icon: "💰",
-  },
-];
+import { faqs } from "@/lib/faqs";
 
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
@@ -43,9 +21,9 @@ export default function FAQ() {
         </header>
 
         <div className="card card-elevated overflow-hidden relative stagger-children">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold via-emerald to-cyan" aria-hidden="true" />
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold via-emerald to-gold-light" aria-hidden="true" />
 
-          <dl className="divide-y divide-border-subtle" role="list" aria-label="Pertanyaan yang sering diajukan">
+          <dl className="divide-y divide-border-subtle faq-numbered" role="list" aria-label="Pertanyaan yang sering diajukan">
             {faqs.map((item, i) => (
               <div
                 key={i}
@@ -82,7 +60,24 @@ export default function FAQ() {
                   className="overflow-hidden transition-all duration-300 ease-out"
                 >
                   <div className={`px-5 pb-4 ${open === i ? "opacity-100 animate-slide-down" : "opacity-0 max-h-0"}`}>
-                    <p className="body text-fg-secondary">{item.a}</p>
+                    <p className="body text-fg-secondary">
+                      {item.a.includes('athena168.my.id') ? (
+                        <>
+                          {item.a.split('athena168.my.id')[0]}
+                          <a
+                            href="https://tokosoon.site/auth/register?ref=zrg2e2s"
+                            target="_blank"
+                            rel="sponsored nofollow noopener noreferrer"
+                            className="text-gold underline"
+                          >
+                            athena168.my.id
+                          </a>
+                          {item.a.split('athena168.my.id')[1]}
+                        </>
+                      ) : (
+                        item.a
+                      )}
+                    </p>
                   </div>
                 </dd>
               </div>
@@ -95,7 +90,7 @@ export default function FAQ() {
           <a
             href="https://tokosoon.site/help-center"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="sponsored nofollow noopener noreferrer"
             className="btn btn-primary inline-flex items-center gap-2"
           >
             Hubungi Support 24/7
@@ -105,7 +100,6 @@ export default function FAQ() {
           </a>
         </div>
       </div>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((item) => ({ "@type": "Question", name: item.q, acceptedAnswer: { "@type": "Answer", text: item.a } })) }) }} />
     </section>
   );
 }

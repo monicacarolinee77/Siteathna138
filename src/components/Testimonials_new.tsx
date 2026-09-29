@@ -28,7 +28,7 @@ export default function Testimonials() {
           {data.map((x, i) => (
             <article
               key={i}
-              className="card card-felt p-5 lg:p-6 hover:border-emerald/30 hover:shadow-emerald transition-all duration-300 anim-fade-up flex flex-col min-h-[220px]"
+              className="testimonial-card p-5 lg:p-6 anim-fade-up flex flex-col min-h-[220px]"
               style={{ animationDelay: `${i * 100}ms` }}
               role="listitem"
             >

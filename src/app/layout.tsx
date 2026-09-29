@@ -20,7 +20,7 @@ const orbitron = Orbitron({
   weight: ["400", "500", "700", "900"],
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://athena168.run";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://athena168.web.id";
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -95,6 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} h-full antialiased`}
     >
       <head>
+        <meta name="google-site-verification" content="DHm5BFgeSul5WtZItmjva8WDAVN1fv82eLAjRfrvGN0" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://athena168.run";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://athena168.web.id";
 
 export const metadata = { 
   title: "Shop All Designs — athena168",

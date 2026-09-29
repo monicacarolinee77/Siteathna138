@@ -1,13 +1,15 @@
 "use client";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const searchWrapperRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -38,14 +40,14 @@ export default function Header() {
   ];
 
   return (
-    <header className={"sticky top-0 z-50 transition-all duration-300 " + (scrolled ? "bg-bg-deep/95 backdrop-blur-xl border-b border-border-subtle shadow-xl" : "bg-transparent")}>
+<header className={"sticky top-0 z-50 transition-all duration-300 header-premium " + (scrolled ? "shadow-xl" : "")}>
       {/* Mobile Top Bar - Daftar & Login always visible */}
       <div className="lg:hidden border-b border-border-subtle bg-bg-deepest/80 backdrop-blur-xl">
         <div className="container-main py-2 flex items-center justify-end gap-2">
-          <a href="https://tokosoon.site/auth/login?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-sm">
+              <a href="https://tokosoon.site/auth/login?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="btn btn-secondary btn-sm">
             Login
           </a>
-          <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
+              <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="btn btn-primary btn-sm">
             Daftar
           </a>
         </div>
@@ -71,10 +73,10 @@ export default function Header() {
               </span>
             </div>
             <div className="flex items-center gap-3 text-xs">
-              <a href="https://tokosoon.site/auth/login?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="nav-pill nav-pill-active px-3 py-1.5">
+              <a href="https://tokosoon.site/auth/login?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="nav-pill nav-pill-active px-3 py-1.5">
                 Login
               </a>
-              <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
+              <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="btn btn-primary btn-sm">
                 Daftar
               </a>
             </div>
@@ -110,11 +112,11 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-3">
             {/* Search */}
             <div className="relative" ref={searchWrapperRef}>
-              <button
+              <button type="button"
                 className="btn btn-ghost btn-sm p-2"
                 onClick={() => setShowSuggestions(!showSuggestions)}
-                aria-label="Search"
                 aria-expanded={showSuggestions}
+                aria-controls="search-suggestions"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                   <circle cx="11" cy="11" r="8" />
@@ -122,7 +124,7 @@ export default function Header() {
                 </svg>
               </button>
               {showSuggestions && (
-                <div className="absolute right-0 top-full mt-2 w-64 card-elevated rounded-md border-border-hover overflow-hidden shadow-xl anim-scale-in" role="list">
+                <div id="search-suggestions" className="absolute right-0 top-full mt-2 w-64 card-elevated rounded-md border-border-hover overflow-hidden shadow-xl anim-scale-in" role="list">
                   <div className="p-2 border-b border-border-subtle flex items-center gap-2">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-gold" aria-hidden="true">
                       <circle cx="11" cy="11" r="8" />
@@ -147,10 +149,10 @@ export default function Header() {
               )}
             </div>
 
-            <a href="https://tokosoon.site/auth/login?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-sm hidden sm:inline-flex">
+            <a href="https://tokosoon.site/auth/login?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="btn btn-secondary btn-sm hidden sm:inline-flex">
               Login
             </a>
-            <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
+            <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="btn btn-primary btn-sm">
               Daftar Sekarang
             </a>
 
@@ -202,11 +204,11 @@ export default function Header() {
       {open && (
         <div className="lg:hidden border-t border-border-subtle bg-bg-deep/95 backdrop-blur-xl p-4 anim-slide-down">
           <nav className="flex flex-col gap-2 mb-4" aria-label="Mobile navigation">
-            <Link href="/" className="nav-pill px-4 py-3 justify-start" onClick={() => setOpen(false)}>Beranda</Link>
-            <Link href="/rtp" className="nav-pill px-4 py-3 justify-start" onClick={() => setOpen(false)}>RTP Slot</Link>
-            <Link href="/t-shirts" className="nav-pill px-4 py-3 justify-start" onClick={() => setOpen(false)}>Merchandise</Link>
-            <Link href="/#produk-kami" className="nav-pill px-4 py-3 justify-start" onClick={() => setOpen(false)}>Produk</Link>
-            <Link href="/#faq" className="nav-pill px-4 py-3 justify-start" onClick={() => setOpen(false)}>FAQ</Link>
+            <Link href="/" className="nav-pill px-4 py-3 justify-start" onClick={() => setOpen(false)} aria-current={pathname === "/" ? "page" : undefined}>Beranda</Link>
+            <Link href="/rtp" className="nav-pill px-4 py-3 justify-start" onClick={() => setOpen(false)} aria-current={pathname === "/rtp" ? "page" : undefined}>RTP Slot</Link>
+            <Link href="/t-shirts" className="nav-pill px-4 py-3 justify-start" onClick={() => setOpen(false)} aria-current={pathname === "/t-shirts" ? "page" : undefined}>Merchandise</Link>
+            <Link href="/#produk-kami" className="nav-pill px-4 py-3 justify-start" onClick={() => setOpen(false)} aria-current={undefined}>Produk</Link>
+            <Link href="/#faq" className="nav-pill px-4 py-3 justify-start" onClick={() => setOpen(false)} aria-current={undefined}>FAQ</Link>
           </nav>
         </div>
       )}

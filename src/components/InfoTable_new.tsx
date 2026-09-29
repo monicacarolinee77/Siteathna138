@@ -12,7 +12,7 @@ export default function InfoTable() {
   return (
     <section className="container-main py-10 lg:py-14 anim-fade-up">
       <div className="card card-elevated overflow-hidden relative max-w-3xl mx-auto">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold via-emerald to-cyan" aria-hidden="true" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold via-emerald to-gold-light" aria-hidden="true" />
 
         <header className="px-5 py-3 border-b border-border-subtle bg-gradient-to-r from-bg-card to-bg-card/80 flex items-center gap-3">
           <div className="w-2 h-8 rounded-sm bg-gradient-to-b from-gold to-gold-dark shadow-[0_0_10px_rgba(240,185,11,0.5)]" aria-hidden="true" />

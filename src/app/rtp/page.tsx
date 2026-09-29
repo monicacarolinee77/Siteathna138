@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { generateGameRtp, formatRtp } from "@/lib/rtp-utils";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://athena168.run";
-// Expanded game data with more games per provider - all games now under TOKOGACOR brand
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://athena168.web.id";
+// Game data with more games per provider
 const providers = [
   {
     name: "Pragmatic Play",
@@ -132,8 +132,8 @@ const jsonLd = {
   "@type": "Article",
   headline: "RTP Slot Tertinggi 2026 — Rekomendasi Game Pragmatic, PG Soft, Microgaming, Playtech, Jili, Habanero",
   description: "Daftar RTP slot tertinggi dari 6 provider terpopuler: Pragmatic Play, PG Soft, Microgaming, Playtech, Jili, Habanero. Cek RTP, volatilitas, max win & fitur sebelum main.",
-  author: { "@type": "Person", name: "Tim TOKOGACOR" },
-  publisher: { "@type": "Organization", name: "TOKOGACOR" },
+  author: { "@type": "Person", name: "Tim athena168" },
+  publisher: { "@type": "Organization", name: "athena168" },
   datePublished: "2026-09-18",
   dateModified: "2026-09-18",
   mainEntityOfPage: `${siteUrl}/rtp`,
@@ -166,16 +166,16 @@ export const metadata = {
     title: "RTP Slot Tertinggi 2026 | Rekomendasi Game 6 Provider Terpopuler",
     description: "Cek RTP slot tertinggi dari Pragmatic, PG Soft, Microgaming, Playtech, Jili, Habanero. Data update 2026.",
     url: `${siteUrl}/rtp`,
-    siteName: "TOKOGACOR",
+    siteName: "athena168",
     type: "website",
     locale: "id_ID",
-    images: [{ url: "/og-tokogacor.jpg", width: 1200, height: 630, alt: "RTP Slot Tertinggi 2026 - TOKOGACOR" }],
+    images: [{ url: "/posterathena168.png", width: 1200, height: 630, alt: "RTP Slot Tertinggi 2026 - athena168" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "RTP Slot Tertinggi 2026",
     description: "Daftar RTP slot 6 provider terpopuler. Data lengkap RTP, volatilitas, max win & fitur.",
-    images: ["/og-tokogacor.jpg"],
+    images: ["/posterathena168.png"],
   },
   robots: {
     index: true,
@@ -202,7 +202,7 @@ export default function RTPPage() {
       {/* Hero Section */}
       <section className="container-main py-12 lg:py-16 anim-fade-up">
         <nav className="text-xs tracking-wider text-foreground/40 flex gap-2 items-center mb-8 anim-slide-up" aria-label="Breadcrumb">
-          <Link href="/" className="hover:text-cyan transition-colors">TOKOGACOR</Link>
+          <Link href="/" className="hover:text-cyan transition-colors">athena168</Link>
           <span className="text-cyan/30" aria-hidden="true">›</span>
           <Link href="/rtp" className="hover:text-cyan transition-colors">RTP Slot</Link>
           <span className="text-cyan/30" aria-hidden="true">›</span>
@@ -303,7 +303,7 @@ export default function RTPPage() {
                     <a
                       href="https://tokosoon.site/auth/register?ref=zrg2e2s"
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="sponsored nofollow noopener noreferrer"
                       className="btn btn-primary w-full justify-center py-3 text-sm group-hover:shadow-glow-cyan transition-shadow"
                     >
                       Mainkan {game.name}
@@ -385,7 +385,7 @@ export default function RTPPage() {
             <li>Volatilitas tinggi = jarang menang tapi besar; Volatilitas rendah = sering menang tapi kecil.</li>
             <li>Progressive Jackpot (Mega Moolah, Age of Gods, dll) RTP dasar lebih rendah karena kontribusi ke jackpot.</li>
             <li>Selalu bermain bertanggung jawab: tetapkan budget, jangan mengejar kekalahan, usia minimal 17+.</li>
-            <li>TOKOGACOR tidak menjamin kemenangan. Bermain untuk hiburan, bukan sumber penghasilan.</li>
+            athena168 tidak menjamin kemenangan. Bermain untuk hiburan, bukan sumber penghasilan.
           </ul>
         </div>
       </section>
@@ -397,12 +397,12 @@ export default function RTPPage() {
           <div className="relative z-10">
             <h2 className="heading-lg text-cyan mb-4">Siap Mencoba Game RTP Tinggi?</h2>
             <p className="body-lg text-foreground/70 mb-8">
-              Daftar di TOKOGACOR resmi, deposit minimal Rp 10.000, dan mainkan game dengan RTP tertinggi dari 6 provider terpopuler.
+              Daftar di athena168 resmi, deposit minimal Rp 10.000, dan mainkan game dengan RTP tertinggi dari 6 provider terpopuler.
             </p>
             <Link
               href="https://tokosoon.site/auth/register?ref=zrg2e2s"
               target="_blank"
-              rel="noreferrer"
+              rel="sponsored nofollow noopener noreferrer"
               className="btn btn-primary text-lg px-10 py-4 shadow-glow-cyan hover:shadow-glow-cyan-strong inline-flex items-center gap-2"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">

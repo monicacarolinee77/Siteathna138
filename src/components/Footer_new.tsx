@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-border-subtle bg-bg-deepest/90 backdrop-blur-xl">
+    <footer className="relative border-t border-border-subtle footer-premium">
       {/* Ambient glow */}
       <div className="absolute inset-0 bg-gradient-to-t from-bg-deepest via-transparent to-transparent opacity-60" aria-hidden="true" />
       <div className="absolute top-0 left-1/4 w-1/2 h-1 bg-gradient-to-r from-transparent via-gold/20 to-transparent rounded-full blur-3xl" aria-hidden="true" />
@@ -29,7 +29,7 @@ export default function Footer() {
               Platform gaming premium dengan akses stabil, login cepat, dan transaksi transparan untuk pengalaman terbaik.
             </p>
             <div className="flex items-center gap-3 pt-2">
-              <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
+              <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="btn btn-primary btn-sm">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                   <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                   <circle cx="8.5" cy="7" r="4" />
@@ -38,7 +38,7 @@ export default function Footer() {
                 </svg>
                 Daftar VIP
               </a>
-              <a href="https://tokosoon.site/auth/login?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-sm">
+              <a href="https://tokosoon.site/auth/login?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="btn btn-secondary btn-sm">
                 Masuk
               </a>
             </div>
@@ -61,10 +61,10 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="heading-sm text-gold tracking-wider">Kontak & Sosial</h4>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm flex-1 justify-center">
+              <a href="https://tokosoon.site/auth/register?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="btn btn-primary btn-sm flex-1 justify-center">
                 Daftar Sekarang
               </a>
-              <a href="https://tokosoon.site/auth/login?ref=zrg2e2s" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-sm flex-1 justify-center">
+              <a href="https://tokosoon.site/auth/login?ref=zrg2e2s" target="_blank" rel="sponsored nofollow noopener noreferrer" className="btn btn-secondary btn-sm flex-1 justify-center">
                 Login
               </a>
             </div>
